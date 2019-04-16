@@ -15,7 +15,7 @@ package exemplo01;
 public class Cadastro {
 	
 	public static void main(String args[]) {
-		Pessoa p = new Pessoa("Edilson", 23, 1.75f, 55f);
+		Pessoa p = new Pessoa("Edilson", 23, 1.75f, 95f);
 		p.exibirPessoa();
 	}
 	
