@@ -29,29 +29,30 @@ public class Pessoa {
 		System.out.println("Idade: "+idade);
 		System.out.println("Altura: "+altura);
 		System.out.println("IMC: "+calcularIMC());
-		System.out.println(classificarIMC());
+		System.out.println("Classificação: "+classificarIMC(calcularIMC()));
 	}
 	
+	//método para calcular o IMC
 	public float calcularIMC() {
 		return peso/(altura*altura);
 	}
 	
 	//método para classificar o IMC
-	public String classificarIMC() {
-		
-		if ( (calcularIMC() < 16)  ) {
+	public String classificarIMC(float imc) {
+		//pegar o resultado do método calcularIMC() e verificar em que situação ele se encaixa
+		if ( (imc < 16)  ) {
 			return "Baixo Peso - Desnutrido";
-		} else if ( (calcularIMC() < 17) ) {
+		} else if ( (imc < 17) ) {
 			return "Baixo Peso Moderado - Desnutrido";
-		} else if ( (calcularIMC() < 18.5) ) {
+		} else if ( (imc < 18.5) ) {
 			return "Baixo Peso Suave - Desnutrido";
-		} else if ( (calcularIMC() < 25) ) {
+		} else if ( (imc < 25) ) {
 			return "Peso Normal - Eutrofia";
-		} else if ( (calcularIMC() < 30) ) {
+		} else if ( (imc < 30) ) {
 			return "Pré obesidade";
-		} else if ( (calcularIMC() < 35) ) {
+		} else if ( (imc < 35) ) {
 			return "Obesidade I - SobrePeso";
-		} else if ( (calcularIMC() < 40) ) {
+		} else if ( (imc < 40) ) {
 			return "Obesidade II - Severa";
 		} 
 		
