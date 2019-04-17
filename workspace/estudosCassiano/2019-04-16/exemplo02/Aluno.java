@@ -37,6 +37,7 @@ public class Aluno extends Pessoa {
 	
 	//método para exibir dados de um aluno
 	public void exibirDadosAluno() {
+		super.exibirPessoa();
 		System.out.println("RA: "+ra);
 		System.out.println("Nota: "+nota);
 		System.out.println("Curso: "+curso);
