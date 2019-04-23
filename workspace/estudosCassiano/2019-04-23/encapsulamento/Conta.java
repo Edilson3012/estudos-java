@@ -30,6 +30,14 @@ public class Conta {
 		this.saldoConta = saldoConta;
 		this.senha = senha;
 	}
+	
+	//método para exibir dados da conta do cliente
+	public void exibirDadosContaCliente() {
+		System.out.println("Cliente: "+getNome());
+		System.out.println("Número da Conta: "+getNumeroConta());
+		System.out.println("Saldo da conta: "+getSaldoConta());
+		System.out.println("Senha: "+getSenha());
+	}
 
 	//Métodos acessores - Get and Set
 	//Serve para guardar/pegar uma informação específica posteriormente, após realizar algum cadastro
