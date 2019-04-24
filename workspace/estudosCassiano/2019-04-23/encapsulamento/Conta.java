@@ -28,11 +28,12 @@ public class Conta {
 	 * @param saldoConta
 	 * @param senha
 	 */
-	public Conta(String nome, int numeroConta, float saldoConta, String senha) {
+	public Conta(String nome, int numeroConta, float saldoConta, String senha, Boolean ativo) {
 		this.nome = nome;
 		this.numeroConta = numeroConta;
 		this.saldoConta = saldoConta;
 		this.senha = senha;
+		this.ativo = true;
 	}
 
 	// método para exibir dados da conta do cliente
@@ -41,6 +42,7 @@ public class Conta {
 		System.out.println("Número da Conta: " + getNumeroConta());
 		System.out.println("Saldo da conta: " + getSaldoConta());
 		System.out.println("Senha: " + getSenha());
+		System.out.println("Situação da conta: "+isAtivo());
 	}
 
 	// método para alterar o nome do cliente
@@ -123,7 +125,37 @@ public class Conta {
 	}
 	
 	
-	
+	//método para verificar se a senha informada é igual a que esta salva
+	public void validarSenha() {
+		// pegar o número da conta informado pelo usuário
+		int nConta = Integer.parseInt(JOptionPane.showInputDialog("Informe o número da conta: "));
+
+		// se o número da conta informado for igual ao que está cadastrado, entra na
+		// condição
+		if (nConta == getNumeroConta()) {
+
+			int i=0;
+			
+			while(  i<3  ) {
+				String senhaAtual2 = (JOptionPane.showInputDialog("Informe a senha atual: "));
+				
+				if( senhaAtual2.equals(getSenha()) ) {
+					JOptionPane.showMessageDialog(null, "Senha validada com sucesso!");
+					break;
+				} 
+				
+				if ( (i==2) && (!senhaAtual2.equals(getSenha())) ) {
+					JOptionPane.showMessageDialog(null, "As suas tentativas foram esgotadas e sua conta foi bloqueada!");
+					ativo=false;
+				}
+				i++;
+			}
+			exibirDadosContaCliente();
+			
+		} else { // caso o número da conta informada for diferente do que esta cadastrado
+			JOptionPane.showMessageDialog(null, "Número da conta inválida ou inexistente!");
+		}
+	}
 
 	// Métodos acessores - Get and Set
 	// Serve para guardar/pegar uma informação específica posteriormente, após
