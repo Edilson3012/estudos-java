@@ -21,6 +21,17 @@ public class Movimentação {
 		
 		c.exibirDadosContaCliente();
 		
+//		c.alterarNomeCliente();
+//		c.realizarDeposito();
+		
+//		c.realizarSaque();
+		
+		c.trocarSenha();
+//		c.exibirDadosContaCliente();
+		
+//		c.validarSenha();
+		
+		
 	}
 	
 	
