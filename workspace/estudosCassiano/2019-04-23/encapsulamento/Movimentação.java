@@ -17,19 +17,20 @@ public class Movimentação {
 	
 	public static void main(String java[]) {
 		
-		Conta c = new Conta("Bruna", 36275, 25000, "123");
+		Conta c = new Conta("Bruna", 36275, 25000, "123", true);
 		
 		c.exibirDadosContaCliente();
+		System.out.println("------------------------");
 		
 //		c.alterarNomeCliente();
 //		c.realizarDeposito();
 		
 //		c.realizarSaque();
 		
-		c.trocarSenha();
+//		c.trocarSenha();
 //		c.exibirDadosContaCliente();
 		
-//		c.validarSenha();
+		c.validarSenha();
 		
 		
 	}
