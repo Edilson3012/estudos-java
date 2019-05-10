@@ -50,7 +50,7 @@ public class Bebida {
 	public void classificarBebida() {
 		
 		JOptionPane.showMessageDialog(null, "---- "
-				+ "Classificação da bebida! ---- "
+				+ "Classificação da bebida! "
 				+ "\n1 - Natural"
 				+ "\n2 - Alcoolica"
 				+ "\n3 - Perigosa"
