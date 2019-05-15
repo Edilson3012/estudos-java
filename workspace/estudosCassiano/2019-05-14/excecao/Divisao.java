@@ -1,7 +1,7 @@
 /**
  * 
  */
-package excessao;
+package excecao;
 
 import javax.swing.JOptionPane;
 

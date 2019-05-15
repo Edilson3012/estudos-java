@@ -1,7 +1,7 @@
 /**
  * 
  */
-package excessao;
+package excecao;
 
 /**
  * @descrition Classe criada para ...
