@@ -17,12 +17,10 @@ public class Desenho {
 	
 	public static void main(String php[]) {
 		
-		Figura ponto = new Figura(1, 2, 3, 4);
-//		Figura linha = new Figura(10, 20);
-		
-		
-		ponto.exibirFigura();
-//		linha.exibirFigura();
+		while(true) {
+			Figura ponto = new Figura();
+			ponto.exibirFigura();
+		}
 		
 	}
 	
