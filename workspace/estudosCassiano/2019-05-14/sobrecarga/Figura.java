@@ -3,6 +3,8 @@
  */
 package sobrecarga;
 
+import javax.swing.JOptionPane;
+
 /**
  * @descrition Classe criada para demonstrar a utilização do recurso de
  *             sobrecarga
@@ -21,7 +23,7 @@ public class Figura {
 	 * tipo, quantidade e ordem dos parâmetros
 	 */
 
-	Integer a, b, c, d;
+	Integer a, b, c, d, e;
 
 	// Construtor para um Ponto
 	public Figura(int a) {
@@ -49,34 +51,113 @@ public class Figura {
 		this.d = d;
 	}
 
+	// Construtor para um pentagono
+	public Figura(int a, int b, int c, int d, int e) {
+		this.a = a;
+		this.b = b;
+		this.c = c;
+		this.d = d;
+		this.e = e;
+	}
+	
+	//Construtor para gerar uma figura a partir de GUIs
+	public Figura() {
+		String msg = "";
+		int opc;
+		
+		msg = "Escolha sua opção: "
+				+ "\n1 - Ponto"
+				+ "\n2 - Linha"
+				+ "\n3 - Triângulo"
+				+ "\n4 - Retângulo"
+				+ "\n5 - Pentágono"
+				+ "\n0 - Sair";
+		
+		opc = Integer.parseInt(JOptionPane.showInputDialog(msg));
+		
+		
+		switch (opc) {
+			
+			case 1: 
+				a = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor de A: "));
+				break;
+			
+			case 2:
+				a = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor de A: "));
+				b = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor de B: "));
+				break;
+			
+			case 3:
+				a = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor de A: "));
+				b = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor de B: "));
+				c = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor de C: "));
+				break;
+				
+			case 4:
+				a = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor de A: "));
+				b = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor de B: "));
+				c = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor de C: "));
+				d = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor de D: "));
+				break;
+				
+			case 5:
+				a = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor de A: "));
+				b = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor de B: "));
+				c = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor de C: "));
+				d = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor de D: "));
+				e = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor de E: "));
+				break;				
+				
+			case 0:
+				JOptionPane.showMessageDialog(null, "Sistema será encerrado...");
+				System.exit(0);
+				
+			default:
+				JOptionPane.showMessageDialog(null, "Opção inválida!\nTente novamente!");
+				break;
+		}
+	}
+	
 	// Método genérico que identifica o tipo de figura criada
 	public void exibirFigura() {
-		if ((a != null) && (b == null) && (c == null) && (d == null)) {
+		
+		if((a == null) && (b == null) && (c == null) && (d == null)) {
+			JOptionPane.showMessageDialog(null, "A figura não foi construida!");
+		} else if ((a != null) && (b == null) && (c == null) && (d == null)) {
 			exibirFigura(a);
-		} else if ((a != null) && (b != null) && (c == null) && (d == null)) {
+		} else if ((a != null) && (b != null) && (c == null) && (d == null) && (e == null)) {
 			exibirFigura(true);
-		} else if ((a != null) && (b != null) && (c != null) && (d == null)) {
+		} else if ((a != null) && (b != null) && (c != null) && (d == null) && (e == null)) {
 			exibirFigura(a, b, c);
-		} else {
+		} else if ((a != null) && (b != null) && (c != null) && (d != null) && (e == null)  ) {
 			exibirFigura(a, b, c, d);
+		} else {
+			exibirFigura(a, b, c, d, e);
 		}
 	}
 
 	// métodos sobrecarregados para exibir os dados das Figuras
 	public void exibirFigura(int a) {
-		System.out.println("É um ponto de valor: " + a);
+		JOptionPane.showMessageDialog(null, "É um ponto de valor: " + a, "Ponto", 0);
+		JOptionPane.showMessageDialog(null, "É um ponto de valor: " + a, "Ponto", 1);
+		JOptionPane.showMessageDialog(null, "É um ponto de valor: " + a, "Ponto", 2);
+		JOptionPane.showMessageDialog(null, "É um ponto de valor: " + a, "Ponto", 3);
 	}
 
 	public void exibirFigura(boolean x) {
-		System.out.println("É uma linha de coordenadas " + a + " e " + b);
+		JOptionPane.showMessageDialog(null, "É uma linha de coordenadas " + a + " e " + b);
 	}
 
 	public void exibirFigura(int a, int b, int c) {
-		System.out.println("É um triângulo coordenadas " + a + " e " + b + " e " + c);
+		JOptionPane.showMessageDialog(null, "É um triângulo coordenadas " + a + " e " + b + " e " + c);
 	}
 
 	public void exibirFigura(int a, int b, int c, int d) {
-		System.out.println("É um retângulo de coordenadas " + a + " e " + b + " e " + c + " e " + d);
+		JOptionPane.showMessageDialog(null, "É um retângulo de coordenadas " + a + " e " + b + " e " + c + " e " + d);
+	}
+
+	public void exibirFigura(int a, int b, int c, int d, int e) {
+		JOptionPane.showMessageDialog(null,	"É um retângulo de coordenadas " + a + " e " + b + " e " + c + " e " + d + " e " + e);
 	}
 
 }
