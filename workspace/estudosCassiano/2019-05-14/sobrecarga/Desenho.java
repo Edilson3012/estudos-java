@@ -13,7 +13,7 @@ package sobrecarga;
  * @version 
  *
  */
-public class Desenho {
+public class Desenho { 
 	
 	public static void main(String php[]) {
 		
