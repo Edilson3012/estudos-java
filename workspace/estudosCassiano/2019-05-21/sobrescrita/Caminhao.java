@@ -41,9 +41,6 @@ public class Caminhao extends Veiculo{
 		this.trucado = trucado;
 	}
 
-
-
-
 	/**
 	 * @return the modelo
 	 */
