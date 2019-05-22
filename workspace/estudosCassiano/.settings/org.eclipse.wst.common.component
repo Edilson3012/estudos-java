@@ -5,6 +5,7 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/2019-04-16"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/2019-04-23"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/2019-05-14"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/2019-05-21"/>
         <property name="context-root" value="estudosCassiano"/>
         <property name="java-output-path" value="/estudosCassiano/build/classes"/>
     </wb-module>
