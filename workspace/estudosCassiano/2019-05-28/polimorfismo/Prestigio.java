@@ -20,7 +20,7 @@ public class Prestigio implements Pizza {
 	 */
 	@Override
 	public void montar() {
-		System.out.println("Chocolate, coco");
+		System.out.println("\n-- Pizza de Prestigio --\nChocolate, coco");
 	}
 
 	/* 

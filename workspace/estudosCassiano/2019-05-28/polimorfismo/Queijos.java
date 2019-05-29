@@ -20,7 +20,7 @@ public class Queijos implements Pizza {
 	 */
 	@Override
 	public void montar() {
-		System.out.println("Mussarela, catupiri, chedar, provolone");
+		System.out.println("\n-- Pizza de QUEIJOS --\nMussarela, catupiri, chedar, provolone");
 	}
 
 	/* 

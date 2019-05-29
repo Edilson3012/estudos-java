@@ -20,7 +20,7 @@ public class Strogonoff implements Pizza {
 	 */
 	@Override
 	public void montar() {
-		System.out.println("Strogonoff de carne, batata palha, champignon");
+		System.out.println("\n-- Strogonoff de carne --\nStrogonoff de carne, batata palha, champignon");
 	}
 
 	/* 

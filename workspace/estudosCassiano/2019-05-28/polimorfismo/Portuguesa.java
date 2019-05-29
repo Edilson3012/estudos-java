@@ -20,7 +20,7 @@ public class Portuguesa implements Pizza {
 	 */
 	@Override
 	public void montar() {
-		System.out.println("Mussarela, tomate, presunto, ovo, ervilha, palmito e molho de tomate");
+		System.out.println("\n-- Portuguesa --\nMussarela, tomate, presunto, ovo, ervilha, palmito e molho de tomate");
 	}
 
 	/* 

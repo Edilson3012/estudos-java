@@ -20,7 +20,7 @@ public class Calabresa implements Pizza {
 	 */
 	@Override
 	public void montar() {
-		System.out.println("Calabresa, molo de tomate, cebola, azeitonas e orégano");
+		System.out.println("\n-- Pizza de Calabresa --\nCalabresa, molo de tomate, cebola, azeitonas e orégano");
 	}
 
 	/* 
