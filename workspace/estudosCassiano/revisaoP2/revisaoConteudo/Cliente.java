@@ -19,7 +19,11 @@ public class Cliente extends Pessoa { //EXTENDS -> Usado quando uma classe herda
 	
 	public void exibirDados() {
 		System.out.println("\n--- DADOS DO CLIENTE ---");
-		System.out.println("\nApelido: "+getApelido());
+		System.out.println("Nome: "+getNome());
+		System.out.println("Peso: "+getPeso());
+		System.out.println("Idade: "+getIdade());
+		System.out.println("Vivo?: "+isVivo());
+		System.out.println("Apelido: "+getApelido());
 	}
 	
 	//Método construtor da classe Cliente.
